@@ -48,3 +48,16 @@ if(location.hash){
 
   
 }
+
+function goto(url) {
+
+  app.dialog.preloader("Yükleniyor")
+  
+  setTimeout(() => {
+    app.views.main.router.navigate("/"+(url)+"/")
+  app.dialog.close()
+  }, 1000);
+
+  
+}
+
