@@ -1,12 +1,6 @@
-- name: Deploy Firebase Site
-  # You may pin to the exact commit or the version.
-  uses: danielmillan/pipelines-firebase-hosting@1.0.8
-  with:
-    # Token generated to authenticate in firebase
-    firebase-token: AAAAWp7DOM8:APA91bHlk5Fl_ey1zfnwpA55ndP4Qv4wl8zoDAh3fjADTVgBsFbBzINUsCXE8QFUbJoPoDGbAR5G5lNG5VeNJAuj51rxx91LAf5ZBx4QfhpdEPngXVJM_XWKnauCO4DIj3yfA_OTYnRi
-    # Name of the folder containing the resources to be deployed
-    resources-name: www
-    # Firebase project name
-    project-name: menu-line
-    # Target name if you need to deploy to a specific instance
-    #target-name: # optional
+- name: fbhost
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.CA_GITHUB_TOKEN }}
+          persist-credentials: false
+          path: www
